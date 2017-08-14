@@ -1,0 +1,211 @@
+/*
+resets
+*/
+* {
+  box-sizing: border-box; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h4 {
+  margin: 0; }
+
+/*
+    general
+*/
+body {
+  font-family: 'Lato', sans-serif; }
+
+.navbar {
+  margin-bottom: 0;
+  border-radius: 0;
+  border: none; }
+
+.navbar-brand {
+  padding: 20px 0 0 0; }
+
+.navbar-toggle {
+  padding: 10px;
+  margin: 15px; }
+
+.logo {
+  padding: 0;
+  font-size: 38px;
+  font-weight: 900;
+  letter-spacing: -1px; }
+
+.logo-emphasize {
+  color: #e6b706; }
+
+.navbar li {
+  border-left: 1px solid #CDCDCB; }
+  .navbar li:last-child {
+    border-right: 1px solid #CDCDCB; }
+  .navbar li a {
+    transition: color .3s ease-in, background-color .3s ease-out; }
+
+.navbar-collapse.collapsing,
+.navbar-collapse.in {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  background: #f1f3ee; }
+
+.navbar-collapse.collapsing li {
+  opacity: 0; }
+
+.navbar-collapse.in li {
+  opacity: 1;
+  transition: all .1s linear; }
+
+.navbar-collapse.in li:nth-of-type(1) {
+  transition-delay: 0.2s; }
+
+.navbar-collapse.in li:nth-of-type(2) {
+  transition-delay: 0.4s; }
+
+.navbar-collapse.in li:nth-of-type(3) {
+  transition-delay: 0.6s; }
+
+.navbar-collapse.in li:nth-of-type(4) {
+  transition-delay: 0.8s; }
+
+.navbar-collapse.in li:nth-of-type(5) {
+  transition-delay: 1s; }
+
+.navbar-collapse.collapsing .transition {
+  width: 30px;
+  transition: width .2s linear; }
+
+.navbar-collapse.in .transition {
+  width: 0;
+  transition: all .2s linear; }
+
+.navbar-collapse.in .transition-1 {
+  transition-delay: 0.2s; }
+
+.navbar-collapse.in .transition-2 {
+  transition-delay: 0.4s; }
+
+.navbar-collapse.in .transition-3 {
+  transition-delay: 0.6s; }
+
+.navbar-collapse.in .transition-4 {
+  transition-delay: 0.8s; }
+
+.navbar-collapse.in .transition-5 {
+  transition-delay: 1s; }
+
+span[class*=transition] {
+  display: inline-block;
+  width: 0; }
+
+.hero {
+  position: relative; }
+
+.hero-image-container {
+  background: url("../img/hero-image.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 400px; }
+  @media (min-width: 1200px) {
+    .hero-image-container {
+      background-position-y: -100px; } }
+  @media (min-width: 1500px) {
+    .hero-image-container {
+      background-position-y: -130px; } }
+  @media (min-width: 1800px) {
+    .hero-image-container {
+      background-position-y: -170px; } }
+
+.hero-slogan {
+  position: absolute;
+  width: 40%;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  background: rgba(49, 51, 50, 0.6);
+  padding-left: 40px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-right: 40px; }
+  @media (max-width: 880px) {
+    .hero-slogan {
+      width: 360px; } }
+  .hero-slogan .slogan {
+    font-size: 28px;
+    color: #fff;
+    font-weight: 300;
+    line-height: 34px; }
+  .hero-slogan .slogan-second {
+    font-weight: 700; }
+
+.content {
+  min-height: 300px;
+  position: relative; }
+
+.section-pentagon:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  background: inherit;
+  height: 40px;
+  width: 100%;
+  left: 0;
+  top: 100%;
+  -webkit-clip-path: polygon(0 0, 50% 100%, 100% 0);
+  clip-path: polygon(0 0, 50% 100%, 100% 0); }
+
+.content:nth-of-type(2) {
+  z-index: 5; }
+
+.content:nth-of-type(3) {
+  z-index: 4; }
+
+.content:nth-of-type(4) {
+  z-index: 3; }
+
+.content:nth-of-type(5) {
+  z-index: 2; }
+
+.content:nth-of-type(6) {
+  z-index: 1; }
+
+/*
+    custom
+*/
+.custom-container {
+  margin: 0 auto; }
+  @media (min-width: 768px) {
+    .custom-container {
+      width: 750px; } }
+  @media (min-width: 830px) {
+    .custom-container {
+      width: 790px; } }
+  @media (min-width: 992px) {
+    .custom-container {
+      width: 970px; } }
+  @media (min-width: 1200px) {
+    .custom-container {
+      width: 1170px; } }
+  @media (min-width: 1400px) {
+    .custom-container {
+      width: 1340px; } }
+  @media (min-width: 1500px) {
+    .custom-container {
+      width: 1420px; } }
+  @media (min-width: 1900px) {
+    .custom-container {
+      width: 1820px; } }
+
+.bg-yellow {
+  background: #e6b505; }
+
+.bg-white {
+  background: #fff; }
+
+.bg-gray {
+  background: #f0f3ee; }
