@@ -166,18 +166,41 @@ span[class*=transition] {
     position: relative;
 }
 
+// triangle heights
+$tri-xlg: 60px;
+$tri-lg: 40px;
+$tri-md: 30px;
+$tri-sm: 20px;
+$tri-xs: 10px;
 .section-pentagon {
     &:after {
         content: " ";
         display: block;
         position: absolute;
         background: inherit;
-        height: 40px;
         width: 100%;
         left: 0;
         top: 100%;
         -webkit-clip-path: polygon(0 0, 50% 100%, 100% 0);
         clip-path: polygon(0 0, 50% 100%, 100% 0);
+        // @media (min-width: 992px) {
+        //     height: $tri-md;
+        // }
+        @media (min-width: 768px) {
+            height: $tri-sm;
+        }
+        @media (min-width: 830px) {
+            height: $tri-md;
+        }
+        @media (min-width: 992px) {
+            height: $tri-md;
+        }
+        @media (min-width: 1200px) {
+            height: $tri-lg;
+        }
+        @media (min-width: 1500px) {
+            height: $tri-xlg;
+        }
     }
 }
 
