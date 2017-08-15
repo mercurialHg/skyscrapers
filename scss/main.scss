@@ -26,6 +26,12 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
+@media (min-width: 992px) {
+    .col-md-offset-1_5 {
+        margin-left: 12.5%;
+    }
+}
+
 //header 
 .navbar {
     margin-bottom: 0;
@@ -162,8 +168,11 @@ span[class*=transition] {
 
 //content 
 .content {
-    min-height: 300px;
     position: relative;
+}
+
+.section {
+    padding-top: 15px;
 }
 
 // triangle heights
@@ -171,7 +180,7 @@ $tri-xlg: 60px;
 $tri-lg: 40px;
 $tri-md: 30px;
 $tri-sm: 20px;
-$tri-xs: 10px;
+$tri-xs: 15px;
 .section-pentagon {
     &:after {
         content: " ";
@@ -183,9 +192,9 @@ $tri-xs: 10px;
         top: 100%;
         -webkit-clip-path: polygon(0 0, 50% 100%, 100% 0);
         clip-path: polygon(0 0, 50% 100%, 100% 0);
-        // @media (min-width: 992px) {
-        //     height: $tri-md;
-        // }
+        @media (max-width: 767px) {
+            height: $tri-xs;
+        }
         @media (min-width: 768px) {
             height: $tri-sm;
         }
@@ -204,6 +213,28 @@ $tri-xs: 10px;
     }
 }
 
+.section:nth-child(n+3) {
+    padding-top: 30px;
+    @media (max-width: 767px) {
+        padding-top: $tri-xs;
+    }
+    @media (min-width: 768px) {
+        padding-top: $tri-sm;
+    }
+    @media (min-width: 830px) {
+        padding-top: $tri-md;
+    }
+    @media (min-width: 992px) {
+        padding-top: $tri-md;
+    }
+    @media (min-width: 1200px) {
+        padding-top: $tri-lg;
+    }
+    @media (min-width: 1500px) {
+        padding-top: $tri-xlg;
+    }
+}
+
 @for $i from 2 through 6 {
     .content:nth-of-type(#{$i}) {
         z-index: 7 - $i;
@@ -214,6 +245,19 @@ $tri-xs: 10px;
 /*
     custom
 */
+
+.title {
+    font-size: 40px;
+    line-height: 50px;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 18px;
+    line-height: 26px;
+}
 
 .custom-container {
     margin: 0 auto;
@@ -240,6 +284,10 @@ $tri-xs: 10px;
     }
 }
 
+.text-white {
+    color: white;
+}
+
 .bg-yellow {
     background: #e6b505;
 }
@@ -256,3 +304,13 @@ $tri-xs: 10px;
 //     -webkit-clip-path: polygon(50% 100%, 100% 90%, 100% 0, 0 0, 0 90%);
 //     clip-path: polygon(50% 100%, 100% 90%, 100% 0, 0 0, 0 90%);
 // }
+.service-icon>img {
+    width: 100%;
+    display: inline-block;
+}
+
+.service-title {
+    font-weight: 900;
+    letter-spacing: -1px;
+    font-size: 30px;
+}
