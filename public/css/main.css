@@ -58,11 +58,22 @@ body {
   background: #f1f3ee; }
 
 .navbar-collapse.collapsing li {
-  opacity: 0; }
+  opacity: 0;
+  transition: all .8s linear; }
+
+.navbar-collapse.collapsing .transition {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: all .3s ease-in-out; }
 
 .navbar-collapse.in li {
   opacity: 1;
-  transition: all .1s linear; }
+  transition: all .3s linear; }
+
+.navbar-collapse.in .transition {
+  opacity: 1;
+  transform: translateX(0);
+  transition: all .4s linear; }
 
 .navbar-collapse.in li:nth-of-type(1) {
   transition-delay: 0.2s; }
@@ -78,14 +89,6 @@ body {
 
 .navbar-collapse.in li:nth-of-type(5) {
   transition-delay: 1s; }
-
-.navbar-collapse.collapsing .transition {
-  width: 30px;
-  transition: width .2s linear; }
-
-.navbar-collapse.in .transition {
-  width: 0;
-  transition: all .2s linear; }
 
 .navbar-collapse.in .transition-1 {
   transition-delay: 0.2s; }
@@ -103,8 +106,7 @@ body {
   transition-delay: 1s; }
 
 span[class*=transition] {
-  display: inline-block;
-  width: 0; }
+  display: inline-block; }
 
 .hero {
   position: relative; }
