@@ -278,3 +278,113 @@ span[class*=transition] {
   font-weight: 900;
   letter-spacing: -1px;
   font-size: 30px; }
+
+.portfolio {
+  padding-bottom: 60px; }
+
+.slick-carousel-container {
+  padding-left: 40px;
+  padding-right: 40px;
+  margin: 30px auto 0; }
+  @media (max-width: 579px) {
+    .slick-carousel-container {
+      width: 100%;
+      padding-top: 10px;
+      padding-bottom: 10px; }
+      .slick-carousel-container a.item {
+        width: 100%;
+        height: auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        display: inline-block;
+        overflow: hidden; }
+        .slick-carousel-container a.item img {
+          width: 100%;
+          height: auto; }
+        .slick-carousel-container a.item .favourite {
+          height: 50px;
+          width: 50px;
+          background-size: 30px 30px; }
+        .slick-carousel-container a.item .work-name {
+          height: 40px;
+          line-height: 40px;
+          font-size: 20px; } }
+  @media (min-width: 760px) {
+    .slick-carousel-container {
+      width: 760px; } }
+  @media (min-width: 980px) {
+    .slick-carousel-container {
+      width: 980px; } }
+  @media (min-width: 1220px) {
+    .slick-carousel-container {
+      width: 1200px; } }
+
+a.item {
+  margin-left: 10px;
+  margin-right: 10px;
+  position: relative; }
+
+a.item > img {
+  width: 100%; }
+
+a.item:hover .work-name {
+  transform: translateY(0); }
+
+a.item:hover .favourite {
+  opacity: 1; }
+
+.work-name {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: rgba(49, 51, 50, 0.7);
+  width: 100%;
+  color: #fff;
+  transform: translateY(100%);
+  transition: transform .2s linear; }
+
+.favourite {
+  width: 30px;
+  height: 30px;
+  background-image: url("../img/favourite.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  display: block;
+  right: 5px;
+  top: 5  px;
+  opacity: 0;
+  transition: all .2s linear; }
+  .favourite:hover {
+    background-image: url("../img/favourite-pink.svg"); }
+
+.favourite.active {
+  background-image: url("../img/favourite-red.svg");
+  transition: all .2s linear;
+  opacity: 1; }
+
+div.slick-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 100%;
+  width: 30px;
+  z-index: 10;
+  transition: all .3s ease-in-out;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 25px 25px;
+  cursor: pointer; }
+  div.slick-arrow:hover {
+    -webkit-filter: brightness(10%);
+    filter: brightness(10%);
+    transition: all .3s ease-in-out; }
+
+div.slick-prev {
+  left: -16px;
+  background-image: url("../img/left-arrow.svg"); }
+
+div.slick-next {
+  right: -46px;
+  background-image: url("../img/right-arrow.svg"); }
