@@ -5,10 +5,10 @@
 }
 
 .service {
+    margin-left: auto;
+    margin-right: auto;
     @media (max-width: 479px) {
         width: 300px;
-        margin-left: auto;
-        margin-right: auto;
     }
     
 }
@@ -16,7 +16,10 @@
 .service-icon {}
 
 .service-icon-image {
-    width: 200px;
+    @media (max-width: 479px) {
+        width: 200px;
+    }
+    width: 180px;
 }
 
 .service-name {
@@ -26,6 +29,8 @@
 }
 
 .service-description {
+    font-size: 18px;
+    line-height: 22px;
     max-width: 300px;
     margin-left: auto;
     margin-right: auto; 

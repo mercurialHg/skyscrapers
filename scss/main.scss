@@ -240,9 +240,13 @@ $tri-xs: 15px;
 }
 
 
+@import "footer";
+
 /*
     custom
 */
+
+@import "hamburger";
 
 @import "custom-queries";
 
