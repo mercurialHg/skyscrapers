@@ -233,6 +233,12 @@ span[class*=transition] {
 .content:nth-of-type(6) {
   z-index: 1; }
 
+.footer {
+  background-color: #313332; }
+
+.subsection {
+  color: white; }
+
 /*
     custom
 */
