@@ -1,0 +1,38 @@
+.services {}
+
+.services-container {
+    
+}
+
+.service {
+    @media (max-width: 479px) {
+        width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+}
+
+.service-icon {}
+
+.service-icon-image {
+    width: 200px;
+}
+
+.service-name {
+    font-weight: 900;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.service-description {
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto; 
+    @media (max-width: 767px) {
+        margin-bottom: 25px;
+        .service-description:last-child {
+            margin-bottom: 15px;
+        }
+    }
+}

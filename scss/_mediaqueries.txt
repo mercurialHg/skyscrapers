@@ -1,0 +1,4 @@
+large:   min 1200px
+medium:  min 992px
+small:   min 768px
+x-small: max 767px

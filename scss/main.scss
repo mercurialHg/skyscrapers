@@ -15,9 +15,6 @@ h4 {
     margin: 0;
 }
 
-// media queries
-// END media queries
-
 /*
     general
 */
@@ -26,11 +23,8 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
-@media (min-width: 992px) {
-    .col-md-offset-1_5 {
-        margin-left: 12.5%;
-    }
-}
+@import "general";
+
 
 //header 
 .navbar {
@@ -250,18 +244,17 @@ $tri-xs: 15px;
     custom
 */
 
-.title {
-    font-size: 40px;
-    line-height: 50px;
-    font-weight: 700;
-    margin-top: 20px;
-    margin-bottom: 10px;
+@import "custom-queries";
+
+@media (min-width: 992px) {
+    .col-md-offset-1_5 {
+        margin-left: 12.5%;
+    }
 }
 
-.subtitle {
-    font-size: 18px;
-    line-height: 26px;
-}
+
+
+
 
 .custom-container {
     margin: 0 auto;
@@ -304,17 +297,19 @@ $tri-xs: 15px;
     background: #f0f3ee;
 }
 
+.no-margins {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+
 // .section-pentagon {
 //     -webkit-clip-path: polygon(50% 100%, 100% 90%, 100% 0, 0 0, 0 90%);
 //     clip-path: polygon(50% 100%, 100% 90%, 100% 0, 0 0, 0 90%);
 // }
-.service-icon>img {
-    width: 100%;
-    display: inline-block;
-}
 
-.service-title {
-    font-weight: 900;
-    letter-spacing: -1px;
-    font-size: 30px;
-}
+//services
+@import "services";
+//testing
+@import "testing";
