@@ -15,6 +15,9 @@ h4 {
     margin: 0;
 }
 
+ul {
+    list-style: none;
+}
 /*
     general
 */
@@ -239,7 +242,9 @@ $tri-xs: 15px;
     }
 }
 
-
+@import "portfolio";
+@import "story";
+@import "skills";
 @import "footer";
 
 /*
