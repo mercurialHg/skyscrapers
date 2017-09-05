@@ -16,11 +16,31 @@ $(document).ready(function () {
     //     transitionSpeed: $transitionSpeed,
     // });
 
+
+    //sly 
+
+    var portfolio = new Sly($('.portfolio-frame'), {
+        horizontal: true,
+        itemNav: 'centered',
+        activateMiddle: true,
+        mouseDragging: true,
+        touchDragging: true,
+        scrollBar: $(".portfolio-scrollbar"),
+        speed: 200,
+    });
+    portfolio.init();
+
+    $(window).resize(function() {
+        $frame.sly('reload');
+    });
+
+    //circles 
+
     let dials = [1, 2, 3, 4, 5]
     dials.forEach(function (e) {
         let selector = ".dial-" + e
         let current = $(selector);
-        let load = current.data().load/100;
+        let load = current.data().load / 100;
 
 
         let circle = new ProgressBar.Circle(selector, {
@@ -47,9 +67,9 @@ $(document).ready(function () {
                 }
             }
 
-            
+
         })
 
-        setTimeout(function() {circle.animate(load); }, (e-1)*200 );
+        setTimeout(function () { circle.animate(load); }, (e - 1) * 200);
     })
 })
