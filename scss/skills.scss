@@ -1,0 +1,25 @@
+.skills-container {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 70px;
+    padding-bottom: 60px;
+}
+
+.skill {
+    float: left;
+    color: #fff;
+    .skill-title {
+        font-size: 20px;
+    }
+    .dial {
+        width: 120px;
+        position: relative;
+
+        font-size: 24px;
+        font-weight: 700;
+    }
+    .skill-title {
+        margin-top: 40px;
+    }
+}
+

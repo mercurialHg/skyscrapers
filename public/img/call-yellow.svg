@@ -9,9 +9,9 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="10"
+   width="7"
    height="8.1210003"
-   viewBox="0 0 2.6458333 2.1486813"
+   viewBox="0 0 1.8520834 2.1486813"
    version="1.1"
    id="svg22886"
    inkscape:version="0.92.1 r15371"
@@ -56,7 +56,7 @@
      transform="translate(0,-294.85132)">
     <g
        id="g288"
-       transform="matrix(0.39271827,0,0,-0.39271827,1.2988776,295.40557)">
+       transform="matrix(0.33024293,0,0,-0.33024293,0.93072601,295.46832)">
       <path
          d="M 0,0 H 0.574 C 0.841,0 1.059,0.217 1.059,0.484 V 0.92 c 0,0.267 -0.218,0.482 -0.485,0.482 H 0 c -0.27,0 -0.552,-0.34 -0.752,-0.812 -0.201,-0.477 -0.328,-1.135 -0.328,-1.93 0,-0.791 0.127,-1.406 0.328,-1.879 0.2,-0.474 0.482,-0.816 0.752,-0.816 h 0.574 c 0.267,0 0.485,0.219 0.485,0.486 v 0.434 c 0,0.267 -0.218,0.484 -0.485,0.484 H 0 c -0.366,0 -0.47,0.926 -0.47,1.317 C -0.47,-0.924 -0.366,0 0,0"
          style="fill:#e6b706;fill-opacity:1;fill-rule:nonzero;stroke:none"

@@ -2,6 +2,7 @@
     background-color: #313332;
     overflow: hidden;
 }
+
 .subsection {
     color: white;
     padding-bottom: 20px;
@@ -11,7 +12,7 @@
     margin-bottom: 20px;
 }
 
-.subsection-content  {
+.subsection-content {
     font-size: 15px;
 }
 
@@ -22,8 +23,10 @@
         text-transform: uppercase;
         border-bottom: 1px solid white;
         padding: 3px 0;
-        transition: all .1s linear;
-        cursor: pointer;
+        a {
+            transition: all .1s linear;
+            cursor: pointer;
+        }
         &:before {
             content: " ";
             vertical-align: top;
@@ -37,7 +40,7 @@
             background-repeat: no-repeat;
             transition: all .1s linear;
         }
-        &:hover {
+        a:hover {
             color: darken(#fff, 30%);
             transition: all .1s linear;
         }
@@ -45,7 +48,44 @@
             transform: translateX(4px);
             transition: all .1s ease-in-out;
         }
-
     }
+}
+
+.contact-content {
+    padding-left: 0;
+    li {
+        padding-top: 8px;
+        padding-bottom: 8px;
+        a {
+            display: block;
+            position: relative;
+            padding-left: 50px;
+        }
+        a:before {
+            content:" ";
+            height: 100%;
+            width: 30px;
+            display: block;
+            position: absolute;
+            left: 10px;
+            top: 0;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        a.address:before {
+            background-image: url("../img/house-yellow.svg");
+        }
+        a.tel:before {
+            background-image: url("../img/call-yellow.svg")
+        }
+        a.mail:before {
+            background-image: url("../img/envelope-yellow.svg");
+            height: 200%;
+            top: 50%;
+            transform: translatey(-50%);
+        }
+    }
+    
 }
 
