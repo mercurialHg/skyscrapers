@@ -242,13 +242,28 @@ span[class*=transition] {
 
 .sly-container {
   padding-top: 20px;
-  padding-bottom: 20px; }
+  padding-bottom: 20px;
+  position: relative; }
+  .sly-container .arrow {
+    position: absolute;
+    top: 70px;
+    height: 200px;
+    width: 50px;
+    background: pink; }
+    @media (max-width: 767px) {
+      .sly-container .arrow {
+        display: none; } }
+  .sly-container .prev {
+    left: -50px; }
+  .sly-container .next {
+    right: -50px; }
 
 .frame {
   width: 100%;
-  height: 250px;
+  height: 300px;
   padding: 0;
-  overflow-y: hidden; }
+  overflow-y: hidden;
+  position: relative; }
 
 .frame .slidee {
   margin: 0;

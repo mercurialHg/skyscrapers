@@ -21,17 +21,24 @@ $(document).ready(function () {
 
     var portfolio = new Sly($('.portfolio-frame'), {
         horizontal: true,
-        itemNav: 'centered',
+        itemNav: 'forceCentered',
         activateMiddle: true,
+        smart: true,
         mouseDragging: true,
         touchDragging: true,
         scrollBar: $(".portfolio-scrollbar"),
         speed: 200,
+        startAt: 5,
+        activateOn: 'click',
+        //buttons
+
+        prev: $('.arrow.prev'),
+        next: $('.arrow.next'),
     });
     portfolio.init();
 
     $(window).resize(function() {
-        $frame.sly('reload');
+        $('.portfolio-frame').sly('reload');
     });
 
     //circles 
