@@ -15,7 +15,7 @@ h4 {
 ul {
   list-style: none; }
 
-a, a:hover {
+a, a:hover, a:visited, a:active, a:link {
   color: inherit;
   text-decoration: none; }
 
@@ -249,14 +249,30 @@ span[class*=transition] {
     top: 70px;
     height: 200px;
     width: 50px;
-    background: pink; }
+    background-size: 50px 50px;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: .7;
+    cursor: pointer;
+    border-radius: 5px; }
+    .sly-container .arrow:hover {
+      opacity: 1;
+      background-color: rgba(0, 0, 0, 0.1);
+      transition: all .1s linear; }
+    .sly-container .arrow:active {
+      background-color: rgba(0, 0, 0, 0.2);
+      transition: all .1s linear; }
     @media (max-width: 767px) {
       .sly-container .arrow {
         display: none; } }
+  .sly-container .arrow.disabled {
+    opacity: .3; }
   .sly-container .prev {
-    left: -50px; }
+    left: -50px;
+    background-image: url("../img/arrow-left.svg"); }
   .sly-container .next {
-    right: -50px; }
+    right: -50px;
+    background-image: url("../img/arrow-right.svg"); }
 
 .frame {
   width: 100%;
@@ -277,7 +293,52 @@ span[class*=transition] {
   padding: 0;
   width: 400px;
   height: 100%;
-  background: #000; }
+  position: relative; }
+  .frame .slidee li .favourite, .frame .slidee li .name {
+    position: absolute;
+    z-index: 2; }
+  .frame .slidee li:hover .favourite {
+    opacity: 1; }
+  .frame .slidee li .favourite {
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    background-image: url("../img/favourite.svg");
+    background-size: contain;
+    background-position: center;
+    opacity: 0;
+    transition: all .1s linear; }
+    .frame .slidee li .favourite:hover {
+      background-image: url("../img/favourite-pink.svg"); }
+  .frame .slidee li .favourite.selected {
+    background-image: url("../img/favourite-red.svg");
+    opacity: 1;
+    transition: all .2s linear; }
+  .frame .slidee li .name {
+    bottom: 0;
+    font-size: 20px;
+    text-align: center;
+    transform: translateY(100%);
+    background: rgba(36, 30, 30, 0.7);
+    width: 100%;
+    transition: all .1s ease-in-out;
+    color: #fff; }
+  .frame .slidee li:hover .name {
+    transform: translateY(0);
+    transition: all .2s ease-in-out; }
+  @media (max-width: 991px) {
+    .frame .slidee li .favourite {
+      opacity: 1; }
+    .frame .slidee li .name {
+      transform: translate(0); } }
+
+.sly-item {
+  display: block;
+  height: inherit;
+  width: 100%;
+  background: url("../img/pattern2.png");
+  position: relative; }
 
 .skills-container {
   display: flex;
@@ -318,15 +379,20 @@ span[class*=transition] {
     font-size: 20px;
     text-transform: uppercase;
     border-bottom: 1px solid white;
-    padding: 3px 0; }
+    position: relative;
+    padding-left: 30px; }
     .links-content li a {
       transition: all .1s linear;
-      cursor: pointer; }
+      cursor: pointer;
+      display: block;
+      line-height: 36px; }
     .links-content li:before {
       content: " ";
-      vertical-align: top;
-      margin-right: 20px;
-      display: inline-block;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      display: block;
       height: 30px;
       width: 10px;
       background: url("../img/arrow-yellow.svg");
@@ -338,7 +404,7 @@ span[class*=transition] {
       color: #b3b3b3;
       transition: all .1s linear; }
     .links-content li:hover:before {
-      transform: translateX(4px);
+      transform: translate(4px, -50%);
       transition: all .1s ease-in-out; }
 
 .contact-content {
@@ -350,26 +416,32 @@ span[class*=transition] {
       display: block;
       position: relative;
       padding-left: 50px; }
-    .contact-content li a:before {
-      content: " ";
+    .contact-content li .icon {
+      display: block;
       height: 100%;
       width: 30px;
-      display: block;
       position: absolute;
       left: 10px;
       top: 0;
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center; }
-    .contact-content li a.address:before {
-      background-image: url("../img/house-yellow.svg"); }
-    .contact-content li a.tel:before {
+    .contact-content li .icon.address {
+      background-image: url("../img/house-yellow.svg");
+      transition: all .2s ease-out; }
+    .contact-content li .icon.tel {
       background-image: url("../img/call-yellow.svg"); }
-    .contact-content li a.mail:before {
-      background-image: url("../img/envelope-yellow.svg");
-      height: 200%;
-      top: 50%;
-      transform: translatey(-50%); }
+    .contact-content li .icon.mail {
+      background-image: url("../img/envelope-yellow.svg"); }
+    .contact-content li a:hover {
+      color: #b3b3b3; }
+      .contact-content li a:hover .icon.address {
+        transform: scale(1.2);
+        transition: all .2s ease-out; }
+      .contact-content li a:hover .icon.tel {
+        animation-name: tada; }
+      .contact-content li a:hover .icon.mail {
+        animation-name: jello; }
 
 /*
     custom

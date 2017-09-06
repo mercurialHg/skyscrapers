@@ -2,28 +2,46 @@
     padding-top: 20px;
     padding-bottom: 20px;
     position: relative;
-    .sly-item {
-
-    }
     .arrow {
         position: absolute;
         top: 70px;
         height: 200px;
         width: 50px;
-        background: pink;
+        background-size: 50px 50px;
+        background-position: center;
+        background-repeat: no-repeat;
+        opacity: .7;
+        cursor: pointer;
+        border-radius: 5px;
+        &:hover {
+            opacity: 1;
+            background-color: rgba(0,0,0,.1);
+            transition: all .1s linear;
+        }
+        
+        &:active {
+            background-color: rgba(0,0,0,.2);
+            transition: all .1s linear;
+        }
         @media(max-width: 767px) {
             display: none;
         }
     }
+    .arrow.disabled {
+        opacity: .3;
+    }
     .prev {
         left: -50px;
+        background-image: url("../img/arrow-left.svg")
     }
     .next {
         right: -50px;
+        background-image: url("../img/arrow-right.svg")
     }
 
 
 }
+
 
 
 //sly defaults
@@ -49,5 +67,65 @@
     padding: 0;
     width: 400px;
     height: 100%;
-    background: #000;
+    position: relative;
+    .favourite, .name {
+        position: absolute;
+        z-index: 2;
+    }
+    &:hover .favourite {
+        opacity: 1;
+    }
+    .favourite {
+        top: 10px;
+        right: 10px;
+        width: 40px;
+        height: 40px;
+        background-image: url("../img/favourite.svg");
+        background-size: contain;
+        background-position: center;
+        opacity: 0;
+        transition: all .1s linear;
+        &:hover {
+            background-image: url("../img/favourite-pink.svg");       
+        }
+    }
+    .favourite.selected {
+        background-image: url("../img/favourite-red.svg");  
+        opacity: 1;    
+        transition: all .2s linear;
+    }
+
+    .name {
+        bottom: 0;
+        font-size: 20px;
+        text-align: center;
+        transform: translateY(100%);
+        background: rgba(36, 30, 30, 0.7);
+        width: 100%;
+        transition: all .1s ease-in-out;
+        color: #fff;
+    }
+    &:hover .name {
+        transform: translateY(0);
+        transition: all .2s ease-in-out;
+    }
+
+    @media (max-width: 991px) {
+        .favourite {
+            opacity: 1;
+        }
+        .name {
+            transform: translate(0);
+        }
+    }
+    
+}
+
+
+.sly-item {
+    display: block;
+    height: inherit;
+    width: 100%;
+    background: url("../img/pattern2.png");
+    position: relative;
 }

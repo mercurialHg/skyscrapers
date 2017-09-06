@@ -3,43 +3,108 @@ $(document).ready(function () {
     // hamburger events
     $("button.hamburger").click(function () {
         if ($(".navbar-collapse").hasClass("collapsing")) return;
-        $(this).toggleClass("is-active")
+        $(this).toggleClass("is-active");
     })
 
 
-    // let $autoplaySpeed = 3000;
-    // let $transitionSpeed = 300;
-    // $(".hero-slider").slick({
-    //     arrows: false,
-    //     autoplay: true,
-    //     autoplaySpeed: $autoplaySpeed,
-    //     transitionSpeed: $transitionSpeed,
-    // });
+    //sly
 
 
-    //sly 
+    var portfolioLg = new Sly($('.portfolio-frame'), {
+        horizontal: true,
+        itemNav: 'centered',
+        activateMiddle: true,
+        smart: true,
+        mouseDragging: true,
+        touchDragging: true,
+        speed: 200,
+        startAt: 0,
+        activateOn: 'click',
+        elasticBounds: true,
+        releaseSwing: true, 
+        scrollBy: 1,
+        //buttons
 
-    var portfolio = new Sly($('.portfolio-frame'), {
+        prev: $('.arrow.prev'),
+        next: $('.arrow.next'),
+    });
+
+
+    var portfolioXs = new Sly($('.portfolio-frame'), {
         horizontal: true,
         itemNav: 'forceCentered',
         activateMiddle: true,
         smart: true,
         mouseDragging: true,
         touchDragging: true,
-        scrollBar: $(".portfolio-scrollbar"),
         speed: 200,
-        startAt: 5,
+        startAt: 0,
         activateOn: 'click',
+        elasticBounds: true,
+        releaseSwing: true, 
+        scrollBy: 1,
         //buttons
 
         prev: $('.arrow.prev'),
         next: $('.arrow.next'),
     });
-    portfolio.init();
 
-    $(window).resize(function() {
-        $('.portfolio-frame').sly('reload');
+    if (window.innerWidth < 768) {
+        portfolioXs.init();
+    } else {
+        portfolioLg.init();
+    }
+
+
+    $(".favourite").click(function () {
+        $(this).toggleClass("selected");
+    })
+
+    //sly - story
+
+    var storyLg = new Sly($('.story-frame'), {
+        horizontal: true,
+        itemNav: 'centered',
+        activateMiddle: true,
+        smart: true,
+        mouseDragging: true,
+        touchDragging: true,
+        scrollBar: $(".story-scrollbar"),
+        dragHandle: true,
+        speed: 200,
+        startAt: 0,
+        activateOn: 'click',
+        elasticBounds: true,
+        scrollSource: $(".story-frame"),
+        releaseSwing: true, 
+        scrollBy: 1,
     });
+
+
+    var storyXs = new Sly($('.story-frame'), {
+        horizontal: true,
+        itemNav: 'forceCentered',
+        activateMiddle: true,
+        smart: true,
+        mouseDragging: true,
+        touchDragging: true,
+        scrollBar: $(".story-scrollbar"),
+        dragHandle: true,
+        speed: 200,
+        startAt: 0,
+        activateOn: 'click',
+        elasticBounds: true,
+        scrollSource: $(".story-frame"),
+        releaseSwing: true, 
+        scrollBy: 1,
+    });
+
+    if (window.innerWidth < 768) {
+        storyXs.init();
+    } else {
+        storyLg.init();
+    }
+
 
     //circles 
 
@@ -68,7 +133,7 @@ $(document).ready(function () {
 
                 var value = Math.round(circle.value() * 100);
                 if (value === 0) {
-                    circle.setText('');
+                    circle.setText('0%');
                 } else {
                     circle.setText(value + "%");
                 }
