@@ -17,12 +17,12 @@ $(document).ready(function () {
         smart: true,
         mouseDragging: true,
         touchDragging: true,
-        speed: 200,
+        speed: 300,
         startAt: 0,
         activateOn: 'click',
         elasticBounds: true,
         releaseSwing: true, 
-        scrollBy: 1,
+        scrollBy: 1, scrollTrap: true,
         //buttons
 
         prev: $('.arrow.prev'),
@@ -37,12 +37,12 @@ $(document).ready(function () {
         smart: true,
         mouseDragging: true,
         touchDragging: true,
-        speed: 200,
+        speed: 300,
         startAt: 0,
         activateOn: 'click',
         elasticBounds: true,
         releaseSwing: true, 
-        scrollBy: 1,
+        scrollBy: 1, scrollTrap: true,
         //buttons
 
         prev: $('.arrow.prev'),
@@ -71,13 +71,13 @@ $(document).ready(function () {
         touchDragging: true,
         scrollBar: $(".story-scrollbar"),
         dragHandle: true,
-        speed: 200,
+        speed: 300,
         startAt: 0,
         activateOn: 'click',
         elasticBounds: true,
         scrollSource: $(".story-frame"),
         releaseSwing: true, 
-        scrollBy: 1,
+        scrollBy: 1, scrollTrap: true,
     });
 
 
@@ -90,13 +90,13 @@ $(document).ready(function () {
         touchDragging: true,
         scrollBar: $(".story-scrollbar"),
         dragHandle: true,
-        speed: 200,
+        speed: 300,
         startAt: 0,
         activateOn: 'click',
         elasticBounds: true,
         scrollSource: $(".story-frame"),
         releaseSwing: true, 
-        scrollBy: 1,
+        scrollBy: 1, scrollTrap: true,
     });
 
     if (window.innerWidth < 768) {
