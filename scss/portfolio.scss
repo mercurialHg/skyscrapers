@@ -1,18 +1,20 @@
 .sly-container {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    margin-bottom: 20px;   
+    margin-top: 20px;
     position: relative;
+    padding-left: 50px;
+    padding-right: 50px;
     .arrow {
         position: absolute;
-        top: 70px;
-        height: 200px;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 100%;
         width: 50px;
         background-size: 50px 50px; 
         background-position: center;
         background-repeat: no-repeat;
         opacity: .7;
         cursor: pointer;
-        border-radius: 5px;
         &:hover {
             opacity: 1;
             background-color: rgba(0,0,0,.1);
@@ -31,12 +33,16 @@
         opacity: .3;
     }
     .prev {
-        left: -50px;
-        background-image: url("../img/arrow-left.svg")
+        left: 0px;
+        background-image: url("../img/arrow-left.svg");
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
     }
     .next {
-        right: -50px;
-        background-image: url("../img/arrow-right.svg")
+        right: 0px;
+        background-image: url("../img/arrow-right.svg");
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
     }
 
 
@@ -52,6 +58,20 @@
     overflow-y: hidden;
     position: relative;
 
+
+    @media (min-width: 768px) {
+        height: 280px;
+    }
+
+    @media (min-width: 992px) {
+        height: 250px;
+    }
+    
+
+    @media(min-width: 1200px) {
+        height: 220px;
+    }
+
 }
 
 .frame .slidee {
@@ -65,7 +85,23 @@
     float: left;
     margin-left: 20px;
     padding: 0;
-    width: 400px;
+    width: 300px; 
+
+    @media (min-width: 768px) {
+        width: 315px;
+    }
+
+    @media (min-width: 992px) {
+        margin-left: 24px;
+        width: 274px;
+    }
+    
+
+    @media(min-width: 1200px) {
+        margin-left: 30px;
+        width: 240px;
+    }
+
     height: 100%;
     position: relative;
     .favourite, .name {
