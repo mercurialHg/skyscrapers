@@ -1,0 +1,167 @@
+.sly-container {
+    margin-bottom: 20px;   
+    margin-top: 20px;
+    position: relative;
+    padding-left: 50px;
+    padding-right: 50px;
+    .arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 100%;
+        width: 50px;
+        background-size: 50px 50px; 
+        background-position: center;
+        background-repeat: no-repeat;
+        opacity: .7;
+        cursor: pointer;
+        &:hover {
+            opacity: 1;
+            background-color: rgba(0,0,0,.1);
+            transition: all .1s linear;
+        }
+        
+        &:active {
+            background-color: rgba(0,0,0,.2);
+            transition: all .1s linear;
+        }
+        @media(max-width: 767px) {
+            display: none;
+        }
+    }
+    .arrow.disabled {
+        opacity: .3;
+    }
+    .prev {
+        left: 0px;
+        background-image: url("../img/arrow-left.svg");
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
+    .next {
+        right: 0px;
+        background-image: url("../img/arrow-right.svg");
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+
+
+}
+
+
+
+//sly defaults
+.frame {
+    width: 100%;
+    height: 300px;
+    padding: 0;
+    overflow-y: hidden;
+    position: relative;
+
+
+    @media (min-width: 768px) {
+        height: 280px;
+    }
+
+    @media (min-width: 992px) {
+        height: 250px;
+    }
+    
+
+    @media(min-width: 1200px) {
+        height: 220px;
+    }
+
+}
+
+.frame .slidee {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    list-style: none;
+}
+
+.frame .slidee li {
+    float: left;
+    margin-left: 20px;
+    padding: 0;
+    width: 300px; 
+
+    @media (min-width: 768px) {
+        width: 315px;
+    }
+
+    @media (min-width: 992px) {
+        margin-left: 24px;
+        width: 274px;
+    }
+    
+
+    @media(min-width: 1200px) {
+        margin-left: 30px;
+        width: 240px;
+    }
+
+    height: 100%;
+    position: relative;
+    .favourite, .name {
+        position: absolute;
+        z-index: 2;
+    }
+    &:hover .favourite {
+        opacity: 1;
+    }
+    .favourite {
+        top: 10px;
+        right: 10px;
+        width: 40px;
+        height: 40px;
+        background-image: url("../img/favourite.svg");
+        background-size: contain;
+        background-position: center;
+        opacity: 0;
+        transition: all .1s linear;
+        &:hover {
+            background-image: url("../img/favourite-pink.svg");       
+        }
+    }
+    .favourite.selected {
+        background-image: url("../img/favourite-red.svg");  
+        opacity: 1;    
+        transition: all .2s linear;
+    }
+
+    .name {
+        bottom: 0;
+        font-size: 20px;
+        text-align: center;
+        transform: translateY(100%);
+        background: rgba(36, 30, 30, 0.7);
+        width: 100%;
+        transition: all .1s ease-in-out;
+        color: #fff;
+    }
+    &:hover .name {
+        transform: translateY(0);
+        transition: all .2s ease-in-out;
+    }
+
+    @media (max-width: 991px) {
+        .favourite {
+            opacity: 1;
+        }
+        .name {
+            transform: translate(0);
+        }
+    }
+    
+}
+
+
+.sly-item {
+    display: block;
+    height: inherit;
+    width: 100%;
+    background: url("../img/pattern2.png");
+    position: relative;
+}

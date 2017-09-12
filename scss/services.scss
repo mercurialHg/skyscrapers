@@ -1,0 +1,43 @@
+.services {}
+
+.services-container {
+    
+}
+
+.service {
+    margin-left: auto;
+    margin-right: auto;
+    @media (max-width: 479px) {
+        width: 300px;
+    }
+    
+}
+
+.service-icon {}
+
+.service-icon-image {
+    @media (max-width: 479px) {
+        width: 200px;
+    }
+    width: 180px;
+}
+
+.service-name {
+    font-weight: 900;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.service-description {
+    font-size: 18px;
+    line-height: 22px;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto; 
+    @media (max-width: 767px) {
+        margin-bottom: 25px;
+        .service-description:last-child {
+            margin-bottom: 15px;
+        }
+    }
+}
