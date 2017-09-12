@@ -446,6 +446,7 @@ span[class*=transition] {
   .skill .skill-title {
     font-size: 20px; }
   .skill .dial {
+    height: 120px;
     width: 120px;
     position: relative;
     font-size: 24px;
@@ -453,6 +454,7 @@ span[class*=transition] {
     margin-bottom: 30px; }
     @media (max-width: 767px) {
       .skill .dial {
+        height: 170px;
         width: 170px;
         margin-bottom: 20px;
         margin-top: 20px; } }
