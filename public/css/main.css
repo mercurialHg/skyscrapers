@@ -145,11 +145,20 @@ span[class*=transition] {
   position: relative; }
 
 .hero-image-container {
-  background: url("../img/hero-image.png");
+  background-image: url("../img/hero-image.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   height: 400px; }
+  @media (max-width: 1199px) {
+    .hero-image-container {
+      background-image: url("../img/hero-image-md.png"); } }
+  @media (max-width: 991px) {
+    .hero-image-container {
+      background-image: url("../img/hero-image-sm.png"); } }
+  @media (max-width: 767px) {
+    .hero-image-container {
+      background-image: url("../img/hero-image-xs.png"); } }
   @media (min-width: 1200px) {
     .hero-image-container {
       background-position-y: -100px; } }

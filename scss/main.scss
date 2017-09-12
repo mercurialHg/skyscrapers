@@ -131,7 +131,17 @@ span[class*=transition] {
 }
 
 .hero-image-container {
-    background: url("../img/hero-image.png");
+    background-image: url("../img/hero-image.png");
+
+    @media (max-width: 1199px) {
+        background-image: url("../img/hero-image-md.png");
+    }
+    @media (max-width: 991px) {
+        background-image: url("../img/hero-image-sm.png");
+    }
+    @media (max-width: 767px) {
+        background-image: url("../img/hero-image-xs.png");
+    }
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
