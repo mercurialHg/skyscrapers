@@ -455,7 +455,10 @@ span[class*=transition] {
     position: relative;
     font-size: 24px;
     font-weight: 700;
-    margin-bottom: 30px; }
+    margin-bottom: 30px; 
+    opacity: 0;
+    transition: all .3s ease-in-out;
+  }
     @media (max-width: 767px) {
       .skill .dial {
         height: 170px;
