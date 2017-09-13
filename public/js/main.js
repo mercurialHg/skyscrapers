@@ -6,7 +6,6 @@ $(document).ready(function () {
         $(this).toggleClass("is-active");
     })
 
-
     //sly
 
 
@@ -142,6 +141,13 @@ $(document).ready(function () {
 
         })
 
-        setTimeout(function () { circle.animate(load); }, (e - 1) * 200);
+        inView(selector)
+        .on("enter", function(elem) {
+            current.css({
+                opacity: 1,
+            });
+            circle.animate(load)
+        })
+
     })
 })
