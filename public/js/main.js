@@ -185,7 +185,7 @@ inView(".attribution").on('enter', function(el) {
         $(el).css({
             opacity: 1,
         })
-    }, 1500);
+    }, 1200);
 }).on('exit', function(el) { 
         $(el).css({
         opacity: 0,       
