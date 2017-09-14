@@ -80,6 +80,9 @@ p {
   font-size: 38px;
   font-weight: 900;
   letter-spacing: -1px; }
+  @media (max-width: 789px) {
+    .logo {
+      padding-left: 10px; } }
 
 .logo-emphasize {
   color: #e6b706; }

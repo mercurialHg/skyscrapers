@@ -64,6 +64,9 @@ body {
     font-size: 38px;
     font-weight: 900;
     letter-spacing: -1px;
+    @media(max-width: 789px) {
+        padding-left: 10px;
+    }
 }
 
 .logo-emphasize {
