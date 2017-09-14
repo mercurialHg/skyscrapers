@@ -38,6 +38,10 @@ body {
     overflow-x: hidden;
 }
 
+.wrapper {
+    position: relative;
+}
+
 @import "general";
 //header 
 .navbar {

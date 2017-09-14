@@ -177,3 +177,17 @@ $(document).ready(function () {
 
     })
 })
+
+//attrib
+
+inView(".attribution").on('enter', function(el) {
+    setTimeout(function(){    
+        $(el).css({
+            opacity: 1,
+        })
+    }, 1500);
+}).on('exit', function(el) { 
+        $(el).css({
+        opacity: 0,       
+    });
+});
