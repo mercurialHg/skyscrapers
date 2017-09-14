@@ -259,6 +259,7 @@ $tri-xs: 15px;
     }
 }
 
+@import "services";
 @import "portfolio";
 @import "story";
 @import "skills";
@@ -328,5 +329,3 @@ $tri-xs: 15px;
 //     -webkit-clip-path: polygon(50% 100%, 100% 90%, 100% 0, 0 0, 0 90%);
 //     clip-path: polygon(50% 100%, 100% 90%, 100% 0, 0 0, 0 90%);
 // }
-//services
-@import "services";
