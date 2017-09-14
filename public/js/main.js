@@ -6,6 +6,32 @@ $(document).ready(function () {
         $(this).toggleClass("is-active");
     })
 
+    // services
+
+    inView(".service").on('enter', function(el) {
+        $(el).addClass('fadeInRight')
+    });
+
+    (function addAnimDelay(selector) {
+
+        if ($(window).innerWidth() > 767) {
+            $(selector).each(function(index){
+                $(this).css({
+                    'animation-delay' : index * 0.2 + "s",
+                    '-webkit-animation-delay' : index * 0.2 + "s",
+                })
+            })
+        } else {
+            $(selector).each(function(index){
+                $(this).css({
+                    'animation-delay' : "0s",
+                    '-webkit-animation-delay' : "0s",
+                })
+            })
+        }
+    })(".service");
+
+    
     //sly
 
 
