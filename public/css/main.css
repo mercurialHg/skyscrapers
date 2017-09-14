@@ -27,7 +27,8 @@ a:link {
     general
 */
 body {
-  font-family: 'Lato', sans-serif; }
+  font-family: 'Lato', sans-serif;
+  overflow-x: hidden; }
 
 .section-inner {
   padding-top: 40px;
@@ -455,10 +456,9 @@ span[class*=transition] {
     position: relative;
     font-size: 24px;
     font-weight: 700;
-    margin-bottom: 30px; 
+    margin-bottom: 30px;
     opacity: 0;
-    transition: all .3s ease-in-out;
-  }
+    transition: all .3s ease-in-out; }
     @media (max-width: 767px) {
       .skill .dial {
         height: 170px;
@@ -556,34 +556,6 @@ span[class*=transition] {
       .contact-content li a:hover .icon.mail {
         animation-name: jello; }
 
-
-
-
-
-.wrapper {
-  position: relative;
-}
-
-.wrapper .attribution {
-    position: absolute;
-    color: #fff;
-    display: inline-block;
-    padding: 10px;
-    bottom: 0;
-    right: 0;
-    font-size: 20px;
-    padding: 15px 20px;
-    text-align: center;
-    border: 2px solid #e6b505;
-    border-radius: 4px;
-    transition: all .2s ease-in;
-  }
-
-.wrapper .attribution:hover {
-  color: inherit;
-  background: #f0f3ee;
-  transition: all .1s ease-out;
-}
 /*
     custom
 */
@@ -690,7 +662,8 @@ span[class*=transition] {
 
 .service {
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  opacity: 0; }
   @media (max-width: 479px) {
     .service {
       width: 300px; } }
@@ -717,16 +690,3 @@ span[class*=transition] {
       margin-bottom: 25px; }
       .service-description .service-description:last-child {
         margin-bottom: 15px; } }
-
-.outer-container {
-  width: 100%;
-  height: 500px;
-  background: #000; }
-  .outer-container > * {
-    display: none; }
-  .outer-container > .inner-container {
-    display: block; }
-  .outer-container .inner-container {
-    height: 100%;
-    background: yellow;
-    margin: 0 auto; }

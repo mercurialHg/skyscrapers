@@ -35,6 +35,7 @@ a:link {
 
 body {
     font-family: 'Lato', sans-serif;
+    overflow-x: hidden;
 }
 
 @import "general";
@@ -329,5 +330,3 @@ $tri-xs: 15px;
 // }
 //services
 @import "services";
-//testing
-@import "testing";
